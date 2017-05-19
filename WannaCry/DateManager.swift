@@ -48,7 +48,7 @@ class DateManager {
     public func string(from interval: TimeInterval) -> String {
         return intervalFormatter
             .string(from: interval > 0 ? interval : 0)!
-            .replacingOccurrences(of: "d ", with: ":")
+            .replacingOccurrences(of: "天 ", with: ":")
             .components(separatedBy: ":")
             .map({ String(format: "%02d", Int($0)!) })
             .joined(separator: ":")
